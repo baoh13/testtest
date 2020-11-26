@@ -16,7 +16,7 @@ namespace Domain.Entities
         public Product Product { get; set; }
         public int Quantity { get; set; }
         [Column(TypeName = "decimal(9, 2)")]
-        public decimal Price { get; set; }
-        public bool Returnable { get; set; }
+        public decimal? Price { get; set; } // Nullable
+        public bool? Returnable { get; set; } // Nullable
     }
 }

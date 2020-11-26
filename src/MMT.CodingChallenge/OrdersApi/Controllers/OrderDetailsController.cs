@@ -1,19 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Application.OrderDetails.Queries.GetOrderDetails;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace OrdersApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class OrderDetailsController : ControllerBase
+    public class OrderDetailsController : ApiController
     {
         [HttpGet]
         public async Task<ActionResult> OrderDetails()
         {
+            var query = new OrderDetailsQuery();
+            var transactionDto = await Mediator.Send(query);
+
             return Ok("OrderDetails");
         }
     }

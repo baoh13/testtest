@@ -15,13 +15,13 @@ namespace Domain.Entities
         public string ProductName { get; set; }
 
         [Column(TypeName = "decimal(9, 2)")]
-        public decimal PackHeight { get; set; }
+        public decimal? PackHeight { get; set; } // Nullable
 
         [Column(TypeName = "decimal(9, 2)")]
-        public decimal PackWidth { get; set; }
+        public decimal? PackWidth { get; set; } // Nullable
 
         [Column(TypeName = "decimal(8, 3)")]
-        public decimal PackWeight { get; set; }
+        public decimal? PackWeight { get; set; } // Nullable
 
         [Column(TypeName = "VARCHAR(20)")]
         public string Colour { get; set; }
