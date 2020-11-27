@@ -31,7 +31,7 @@ namespace Application.OrderDetails.Queries.GetOrderDetails
                 return true;
             }
 
-            return false;
+            throw new InvalidUser();
         }
 
         private void InitializeCustomers()
