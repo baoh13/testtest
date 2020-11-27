@@ -9,7 +9,7 @@ OrdersApi is developed using Clean Architecture with projects Domain, Applicatio
 - Infrastructure is where all the integrations take place such as Integrations to CustomerDetailsApi, Persistence layer and Services if there are any. 
 - OrdersApi is the entry point with its api endpoints. It has references to Application and Infrastructure layers to send commands, queries to correct handlers and receive responses and then returns appropriate responses. 
 
-## Imrprovement 
+## Improvement 
 - Security: We can use an api key as authentication of the incoming requests
 - CustomerDetails ApiClient: Improve the error handling (exceptions, null response, etc), logging, e.g retry, timeout, etc
 - RequestValidation: Validating customer is done inmemory (OrderDetailsQueryValidator) - This needs to be done probably to make this production ready
