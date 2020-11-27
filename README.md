@@ -15,10 +15,10 @@ OrdersApi is developed using Clean Architecture with projects Domain, Applicatio
 - RequestValidation: Validating customer is done inmemory (OrderDetailsQueryValidator) - This needs to be done probably to make this production ready
 - Testing in general is lacking - I'd like to add much more testing and that includes IntegrationTest and unittests especially arround Request Validations, CustomerDetails ApiClient
 - Logging: there is no logging at the moment but some examples are 
-  -- Log all requests
-  -- Log long running requests
-  -- Log errors such as UnhandledExceptions
+  - Log all requests
+  - Log long running requests
+  - Log errors such as UnhandledExceptions
 - Security: 
-  -- Sensitive data such as Customer's address might need to be masked in test/dev environments 
-  -- SSL for communication with endpoint
+  - Sensitive data such as Customer's address might need to be masked in test/dev environments 
+  - SSL for communication with endpoint
 - Devops: work together with devops to integrate the api into existing CI/CD pipelines for different environments 
