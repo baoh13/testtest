@@ -29,6 +29,7 @@ namespace OrdersApi
         {
             services.AddApplication(Configuration);
             services.AddInfrastructure(Configuration);
+            services.AddSwaggerDocument();
             services.AddControllers();
         }
 
@@ -45,6 +46,11 @@ namespace OrdersApi
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseOpenApi();
+            app.UseSwaggerUi3(settings =>
+            {
+                settings.Path = "/api";
+            });
 
             app.UseEndpoints(endpoints =>
             {
