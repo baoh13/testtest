@@ -7,5 +7,7 @@ namespace Application.OrderDetails.Queries.GetOrderDetails
 {
     public class OrderDetailsQuery: IRequest<OrderDetailsDto>
     {
+        public string User { get; set; }
+        public string CustomerId { get; set; }
     }
 }

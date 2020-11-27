@@ -1,10 +1,8 @@
 ﻿using Application.interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.Extensions.Configuration;
+using Infrastructure.Services;
 
 namespace Infrastructure
 {
@@ -15,6 +13,8 @@ namespace Infrastructure
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("Default")));
 
             services.AddScoped<IAppDbContext>(provider => provider.GetService<AppDbContext>());
+
+            services.AddTransient<ICustomerDetailsService, CustomerDetailsService>();
             return services;
         }
     }
